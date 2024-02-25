@@ -28,7 +28,7 @@ Each experimental entry is of this form:
 
 # Assignment:
 ## Hypothesis:
-**Neurons have a higher response in "In vivo" environments compared to other cell types.**<br>
+**Neurons have a higher response in "In vivo" environments compared to other cell types on average.**<br>
 _In vivo: biological term for 'in a living body of an animal'_<br>
 
 You have been designated to share your knowledgeable stance on the hypothesis's validity, deriving insights from real experimental data.<br>
@@ -36,10 +36,10 @@ For this, you will design a small data pipeline encompassing 3 stages, utilizing
 
 ## Pipeline data exchange: files on local disk
 Each step of the assigment is a small "data pipeline", the input to each pipeline should be passed as a file on the local disk, and the output would be a file on the local disk.<br>
-Each "data pipeline" should be triggered by a new file appearing in a specific directory, and should output a file to another specific directory (which in turn will trigger the next "data pipeline").<br>
+**Each "data pipeline" should be triggered by a new file appearing in a specific directory**, and should output a file to another specific directory (which in turn will trigger the next "data pipeline").<br>
 
 (We are saving the intermediary outputs, so that we have a record of our data processing)<br>
-The execution of each "data pipeline" should be asynchronous.
+The execution of each "data pipeline" should be asynchronous - it should be possible to have multiple "data pipelines" running at the same time.<br>
 
 
 ## Step 1: Generate a raw data file using the experiment ID
