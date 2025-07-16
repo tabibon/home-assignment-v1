@@ -61,14 +61,11 @@ Determine the validity of the hypothesis for this specific experiment.
 Compile a summary on the hypothesis's accuracy % for all the experiments that have been processed up until now.
 
 
-## How to test your code
-We have provided you with data to test your code. You may copy it to your `raw_experiment_data/` directory.<br>
-This data should trigger a run of your code, and you should see the output of **Step 3** printed to the console.
+## How to test code
+python3 pipeline.py &
+cp EXP* raw_experiment_data
 
 
 ## Important notes
-* You are expected to do the assignment on your own, and we will expect you to explain your code and design decisions.
-* Limit yourself to 3 hours of work, and try your best in that time.
-* Make sure your code works.
-* Make the code as production-worthy as possible, we want to see your coding style and abilities.
+* code should be production-worthy as possible, we want to see your coding style and abilities.
 * Consider good coding design and practices along the way (e.g. OOP, SOLID).
