@@ -62,8 +62,13 @@ Compile a summary on the hypothesis's accuracy % for all the experiments that ha
 
 
 ## How to test code
-python3 pipeline.py &
+```bash 
+python3 pipeline.py
+```
+in new terminal: 
+```bash
 cp EXP* raw_experiment_data
+```
 
 
 ## Important notes
