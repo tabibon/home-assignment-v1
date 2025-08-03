@@ -1,3 +1,4 @@
+import os
 import json
 import asyncio
 from pathlib import Path
@@ -67,7 +68,7 @@ class Step1Extractor:
             logging.info(f"Step1: Processed and saved {out_file}")
 
             # Remove processed file
-            file_path.unlink()
+            os.remove(file_path)
         except Exception as e:
             failed_file = self.failed_dir / file_path.name
             file_path.replace(failed_file)
@@ -109,7 +110,7 @@ class Step2HypothesisValidator:
             logging.info(f"Step2: Processed {file_path.name}, hypothesis valid: {hypothesis_valid}")
 
             # Remove processed file
-            file_path.unlink()
+            os.remove(file_path)
         except Exception as e:
             logging.error(f"Step2 failed for {file_path}: {e}")
 
@@ -141,7 +142,7 @@ class Step3Aggregator:
             logging.info(f"Hypothesis is true for: {percent:.2f}% across experiments.")
 
             # Remove processed file
-            file_path.unlink()
+            os.remove(file_path)
         except Exception as e:
             logging.error(f"Step3 failed for {file_path}: {e}")
 
